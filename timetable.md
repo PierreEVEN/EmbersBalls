@@ -8,3 +8,4 @@ timestamp :
 - 20h23 : 5e crash UE (purée la 5.4... svp)
 - 20h25 : 6e crash UE
 - 20h40 : Le gameplay de base marche en multi
+- 23h15 : fini la V2
