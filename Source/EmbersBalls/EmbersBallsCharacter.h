@@ -36,9 +36,14 @@ class AEmbersBallsCharacter : public ACharacter
 	/** Move Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
 	UInputAction* MoveAction;
-	
+
+
 public:
 	AEmbersBallsCharacter();
+
+	UPROPERTY(Replicated, BlueprintReadWrite)
+	FTransform PlayerLookTransform;
+
 
 protected:
 	virtual void BeginPlay();
@@ -48,6 +53,10 @@ public:
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
+
+
+	UPROPERTY(Replicated, BlueprintReadOnly)
+	FString BallIndex;
 
 protected:
 	/** Called for movement input */

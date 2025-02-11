@@ -29,6 +29,14 @@ public:
 	UFUNCTION()
 	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	virtual void Tick(float DeltaSeconds) override;
+
+	UPROPERTY(BlueprintReadOnly)
+	float LookRatio = 0.f;
+
+	UPROPERTY(EditAnywhere)
+	float LookSharpness = 50;
+
 	/** Returns CollisionComp subobject **/
 	USphereComponent* GetCollisionComp() const { return CollisionComp; }
 	/** Returns ProjectileMovement subobject **/

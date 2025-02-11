@@ -1,0 +1,10 @@
+timestamp :
+- 17h43 : manger / install
+- 18h30 : début
+- 19h30 : multijoueur fonctionnel avec une balle qui fait de la couleur
+- 19h53 : premier crash UE
+- 20h08 : 3e crash UE
+- 20h22 : 4e crash UE
+- 20h23 : 5e crash UE (purée la 5.4... svp)
+- 20h25 : 6e crash UE
+- 20h40 : Le gameplay de base marche en multi
