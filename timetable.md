@@ -9,3 +9,4 @@ timestamp :
 - 20h25 : 6e crash UE
 - 20h40 : Le gameplay de base marche en multi
 - 23h15 : fini la V2
+- 02h17 : build final avec polish

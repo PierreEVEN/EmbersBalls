@@ -52,6 +52,9 @@ void AEmbersBallsProjectile::Tick(float DeltaSeconds)
 	AEmbersBallsGamestate* GameState = Cast<AEmbersBallsGamestate>(UGameplayStatics::GetGameState(this));
 
 	LookRatio = 0;
+
+	LookingPlayers.Empty();
+
 	for (const auto& Player : GameState->GetPlayerList())
 	{
 		FVector BallToPlayer = (GetActorLocation() - Player->PlayerLookTransform.GetLocation());
@@ -61,6 +64,12 @@ void AEmbersBallsProjectile::Tick(float DeltaSeconds)
 
 		constexpr float MaxAngleRadian = 30 * 0.0174533f; /* 30° * angle to radian constant */
 
-		LookRatio += FMath::Pow(1 - FMath::Clamp(AngleRadian / MaxAngleRadian, 0, 1), 1 / LookSharpness) / GameState->GetPlayerList().Num();
+		float AddedValue = FMath::Pow(1 - FMath::Clamp(AngleRadian / MaxAngleRadian, 0, 1), 1 / LookSharpness) / GameState->GetPlayerList().Num();
+		LookRatio += AddedValue;
+
+		if (AddedValue > 0.01)
+		{
+			LookingPlayers.Add(Player);
+		}
 	}
 }

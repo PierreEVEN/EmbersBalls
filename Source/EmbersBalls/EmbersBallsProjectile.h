@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "EmbersBallsProjectile.generated.h"
 
+class AEmbersBallsCharacter;
 class USphereComponent;
 class UProjectileMovementComponent;
 
@@ -33,6 +34,9 @@ public:
 
 	UPROPERTY(BlueprintReadOnly)
 	float LookRatio = 0.f;
+
+	UPROPERTY(BlueprintReadOnly)
+	TArray<TObjectPtr<AEmbersBallsCharacter>> LookingPlayers;
 
 	UPROPERTY(EditAnywhere)
 	float LookSharpness = 50;
