@@ -16,6 +16,8 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnJump);
+
 UCLASS(config=Game)
 class AEmbersBallsCharacter : public ACharacter
 {
@@ -57,6 +59,19 @@ public:
 
 	UPROPERTY(Replicated, BlueprintReadOnly)
 	FString BallIndex;
+
+	void StartJump();
+
+private:
+
+	UFUNCTION(Server, Reliable)
+	void JumpRep();
+	UFUNCTION(NetMulticast, Reliable)
+	void JumpRepMulticast();
+
+
+	UPROPERTY(BlueprintAssignable)
+	FOnJump OnJump;
 
 protected:
 	/** Called for movement input */
