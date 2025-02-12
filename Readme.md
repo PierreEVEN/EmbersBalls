@@ -2,6 +2,18 @@
 
 ![img](./picture.png)
 
+> (note : j'ai eu quelques crash occasionnels du client à la connexion, probablement un cadeau d'UE...)
+
+## Téléchargez Look at my ball !
+
+[Ici : https://fileshare.evenpierre.fr/Pierre/look-at-my-ball/](https://fileshare.evenpierre.fr/Pierre/look-at-my-ball/)
+
+ou bien
+
+[Ici : https://github.com/PierreEVEN/EmbersBalls/releases/tag/V1.0](https://github.com/PierreEVEN/EmbersBalls/releases/tag/V1.0)
+
+
+
 ## Informations générales
 
 - Version du moteur : UE 5.4.4
